@@ -8,8 +8,8 @@ spec:
   params:
     quotas:
     - name: requestcountquota.instance.istio-system
-      maxAmount: 1
-      validDuration: 5s
+      maxAmount: 500
+      validDuration: 1s
       # The first matching override is applied.
       # A requestcount instance is checked against override dimensions.
       overrides:
@@ -69,7 +69,7 @@ spec:
   services:
   - name: productpage
     namespace: default
-      - service: '*'  # Uncomment this to bind *all* services to request-count
+    #  - service: '*'  # Uncomment this to bind *all* services to request-count
 ---
 apiVersion: config.istio.io/v1alpha2
 kind: rule
