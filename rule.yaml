@@ -48,7 +48,7 @@ spec:
     namespace: -smcp
   services:
   - name: recommendation
-    namespace: -tutorial
+    namespace: -istio-system
     #  - service: '*'  # Uncomment this to bind *all* services to request-count
 ---
 apiVersion: config.istio.io/v1alpha2
