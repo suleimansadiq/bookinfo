@@ -1,40 +1,34 @@
-apiVersion: config.istio.io/v1alpha2
+apiVersion: "config.istio.io/v1alpha2"
 kind: handler
 metadata:
-  name: redishandler
+  name: quotahandler
   namespace: istio-system
 spec:
-  compiledAdapter: redisquota
+  compiledAdapter: memquota
   params:
-    redisServerUrl: redis-release-master:6379
-    connectionPoolSize: 10
     quotas:
     - name: requestcountquota.instance.istio-system
-      maxAmount: 1
-      validDuration: 1s
-      bucketDuration: 500ms
-      rateLimitAlgorithm: ROLLING_WINDOW
+      maxAmount: 0
+      validDuration: 10s
       # The first matching override is applied.
       # A requestcount instance is checked against override dimensions.
       overrides:
-      # The following override applies to 'reviews' regardless
+      # The following override applies to 'ratings' when
+      # the source is 'reviews'.
+      - dimensions:
+          destination: ratings
+          source: reviews
+        maxAmount: 0
+        validDuration: 1s
+      # The following override applies to 'ratings' regardless
       # of the source.
       - dimensions:
-          destination: reviews
-        maxAmount: 1
-      # The following override applies to 'productpage' when
-      # the source is a specific ip address.
-      - dimensions:
-          destination: productpage
-          source: "10.28.11.20"
-        maxAmount: 1
-      # The following override applies to 'productpage' regardless
-      # of the source.
-      - dimensions:
-          destination: productpage
-        maxAmount: 1
+          destination: ratings
+        maxAmount: 0
+        validDuration: 1s
+
 ---
-apiVersion: config.istio.io/v1alpha2
+apiVersion: "config.istio.io/v1alpha2"
 kind: instance
 metadata:
   name: requestcountquota
@@ -43,9 +37,21 @@ spec:
   compiledTemplate: quota
   params:
     dimensions:
-      source: request.headers["x-forwarded-for"] | "unknown"
-      destination: destination.labels["app"] | destination.workload.name | "unknown"
+      source: source.labels["app"] | "unknown"
+      sourceVersion: source.labels["version"] | "unknown"
+      destination: destination.labels["app"] | destination.service.name | "unknown"
       destinationVersion: destination.labels["version"] | "unknown"
+---
+apiVersion: "config.istio.io/v1alpha2"
+kind: rule
+metadata:
+  name: quota
+  namespace: istio-system
+spec:
+  actions:
+  - handler: quotahandler
+    instances:
+    - requestcountquota
 ---
 apiVersion: config.istio.io/v1alpha2
 kind: QuotaSpec
@@ -68,20 +74,7 @@ spec:
   - name: request-count
     namespace: istio-system
   services:
+  - name: ratings
+  - name: reviews
+  - name: details
   - name: productpage
-    namespace: default
-    #  - service: '*'  # Uncomment this to bind *all* services to request-count
----
-apiVersion: config.istio.io/v1alpha2
-kind: rule
-metadata:
-  name: quota
-  namespace: istio-system
-spec:
-  # quota only applies if you are not logged in.
-  # match: match(request.headers["cookie"], "session=*") == false
-  actions:
-  - handler: redishandler
-    instances:
-    - requestcountquota
----
