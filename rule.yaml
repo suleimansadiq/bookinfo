@@ -45,10 +45,10 @@ metadata:
 spec:
   quotaSpecs:
   - name: request-count
-    namespace: -smcp
+    namespace: -istio-system
   services:
   - name: productpage
-    namespace: -default
+    namespace: -istio-system
     #  - service: '*'  # Uncomment this to bind *all* services to request-count
 ---
 apiVersion: config.istio.io/v1alpha2
