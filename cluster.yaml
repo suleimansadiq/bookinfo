@@ -1,0 +1,1240 @@
+apiVersion: maistra.io/v2
+kind: ServiceMeshControlPlane
+metadata:
+  selfLink: /apis/maistra.io/v2/namespaces/demoplane/servicemeshcontrolplanes/basic
+  resourceVersion: '25961118'
+  name: basic
+  uid: 4c2101e5-4f89-4c34-8a35-5ff12d403bbd
+  creationTimestamp: '2021-08-04T12:51:34Z'
+  generation: 1
+  managedFields:
+    - apiVersion: maistra.io/v2
+      fieldsType: FieldsV1
+      fieldsV1:
+        'f:spec':
+          .: {}
+          'f:addons':
+            .: {}
+            'f:grafana':
+              .: {}
+              'f:enabled': {}
+            'f:jaeger':
+              .: {}
+              'f:install':
+                .: {}
+                'f:storage':
+                  .: {}
+                  'f:type': {}
+            'f:kiali':
+              .: {}
+              'f:enabled': {}
+            'f:prometheus':
+              .: {}
+              'f:enabled': {}
+          'f:cluster':
+            .: {}
+            'f:multiCluster':
+              .: {}
+              'f:enabled': {}
+          'f:gateways':
+            .: {}
+            'f:enabled': {}
+          'f:policy':
+            .: {}
+            'f:type': {}
+          'f:telemetry':
+            .: {}
+            'f:type': {}
+          'f:tracing':
+            .: {}
+            'f:sampling': {}
+            'f:type': {}
+          'f:version': {}
+      manager: Mozilla
+      operation: Update
+      time: '2021-08-04T12:51:34Z'
+    - apiVersion: maistra.io/v2
+      fieldsType: FieldsV1
+      fieldsV1:
+        'f:metadata':
+          'f:finalizers': {}
+        'f:status':
+          'f:operatorVersion': {}
+          'f:appliedSpec':
+            'f:gateways':
+              .: {}
+              'f:egress':
+                .: {}
+                'f:runtime':
+                  .: {}
+                  'f:container':
+                    .: {}
+                    'f:resources':
+                      .: {}
+                      'f:requests':
+                        .: {}
+                        'f:cpu': {}
+                        'f:memory': {}
+                  'f:deployment':
+                    .: {}
+                    'f:autoScaling':
+                      .: {}
+                      'f:enabled': {}
+                'f:service': {}
+              'f:enabled': {}
+              'f:ingress':
+                .: {}
+                'f:runtime':
+                  .: {}
+                  'f:container':
+                    .: {}
+                    'f:resources':
+                      .: {}
+                      'f:requests':
+                        .: {}
+                        'f:cpu': {}
+                        'f:memory': {}
+                  'f:deployment':
+                    .: {}
+                    'f:autoScaling':
+                      .: {}
+                      'f:enabled': {}
+                'f:service':
+                  .: {}
+                  'f:type': {}
+              'f:openshiftRoute':
+                .: {}
+                'f:enabled': {}
+            'f:runtime':
+              .: {}
+              'f:components':
+                'f:mixer.telemetry':
+                  .: {}
+                  'f:container':
+                    .: {}
+                    'f:imageName': {}
+                    'f:resources':
+                      .: {}
+                      'f:requests':
+                        .: {}
+                        'f:cpu': {}
+                        'f:memory': {}
+                  'f:deployment':
+                    .: {}
+                    'f:autoScaling':
+                      .: {}
+                      'f:enabled': {}
+                'f:pilot':
+                  .: {}
+                  'f:container':
+                    .: {}
+                    'f:imageName': {}
+                    'f:resources':
+                      .: {}
+                      'f:requests':
+                        .: {}
+                        'f:cpu': {}
+                        'f:memory': {}
+                  'f:deployment':
+                    .: {}
+                    'f:autoScaling':
+                      .: {}
+                      'f:enabled': {}
+                'f:mixer.policy':
+                  .: {}
+                  'f:container':
+                    .: {}
+                    'f:imageName': {}
+                    'f:resources':
+                      .: {}
+                      'f:requests':
+                        .: {}
+                        'f:cpu': {}
+                        'f:memory': {}
+                  'f:deployment':
+                    .: {}
+                    'f:autoScaling':
+                      .: {}
+                      'f:enabled': {}
+                'f:3scale':
+                  .: {}
+                  'f:container':
+                    .: {}
+                    'f:imageName': {}
+                    'f:imageRegistry': {}
+                    'f:imageTag': {}
+                .: {}
+                'f:global.oauthproxy':
+                  .: {}
+                  'f:container':
+                    .: {}
+                    'f:imageName': {}
+                    'f:imagePullPolicy': {}
+                    'f:imageRegistry': {}
+                    'f:imageTag': {}
+                'f:grafana':
+                  .: {}
+                  'f:container':
+                    .: {}
+                    'f:imageName': {}
+                'f:wasmExtensions.cacher':
+                  .: {}
+                  'f:container':
+                    .: {}
+                    'f:imageName': {}
+                    'f:resources':
+                      .: {}
+                      'f:requests':
+                        .: {}
+                        'f:cpu': {}
+                        'f:memory': {}
+                'f:mixer':
+                  .: {}
+                  'f:container':
+                    .: {}
+                    'f:imageName': {}
+                'f:prometheus':
+                  .: {}
+                  'f:container':
+                    .: {}
+                    'f:imageName': {}
+                    'f:resources':
+                      .: {}
+                      'f:requests':
+                        .: {}
+                        'f:cpu': {}
+                        'f:memory': {}
+              'f:defaults':
+                .: {}
+                'f:container':
+                  .: {}
+                  'f:imageRegistry': {}
+                  'f:imageTag': {}
+                  'f:resources':
+                    .: {}
+                    'f:requests':
+                      .: {}
+                      'f:cpu': {}
+                      'f:memory': {}
+                'f:deployment':
+                  .: {}
+                  'f:podDisruption':
+                    .: {}
+                    'f:enabled': {}
+            'f:version': {}
+            'f:telemetry':
+              .: {}
+              'f:type': {}
+            'f:policy':
+              .: {}
+              'f:type': {}
+            'f:addons':
+              .: {}
+              'f:grafana':
+                .: {}
+                'f:enabled': {}
+                'f:install':
+                  .: {}
+                  'f:service':
+                    .: {}
+                    'f:ingress':
+                      .: {}
+                      'f:enabled': {}
+                    'f:metadata':
+                      .: {}
+                      'f:annotations':
+                        .: {}
+                        'f:service.alpha.openshift.io/serving-cert-secret-name': {}
+              'f:jaeger':
+                .: {}
+                'f:install':
+                  .: {}
+                  'f:ingress':
+                    .: {}
+                    'f:enabled': {}
+                  'f:storage':
+                    .: {}
+                    'f:type': {}
+                'f:name': {}
+              'f:kiali':
+                .: {}
+                'f:enabled': {}
+                'f:install':
+                  .: {}
+                  'f:dashboard':
+                    .: {}
+                    'f:viewOnly': {}
+                  'f:service':
+                    .: {}
+                    'f:ingress':
+                      .: {}
+                      'f:enabled': {}
+                'f:name': {}
+              'f:prometheus':
+                .: {}
+                'f:enabled': {}
+                'f:install':
+                  .: {}
+                  'f:service':
+                    .: {}
+                    'f:ingress':
+                      .: {}
+                      'f:enabled': {}
+                    'f:metadata':
+                      .: {}
+                      'f:annotations':
+                        .: {}
+                        'f:service.alpha.openshift.io/serving-cert-secret-name': {}
+            .: {}
+            'f:tracing':
+              .: {}
+              'f:sampling': {}
+              'f:type': {}
+            'f:general':
+              .: {}
+              'f:logging':
+                .: {}
+                'f:componentLevels':
+                  .: {}
+                  'f:default': {}
+            'f:security':
+              .: {}
+              'f:identity':
+                .: {}
+                'f:type': {}
+            'f:proxy':
+              .: {}
+              'f:injection':
+                .: {}
+                'f:autoInject': {}
+              'f:networking':
+                .: {}
+                'f:dns':
+                  .: {}
+                  'f:refreshRate': {}
+                'f:initialization':
+                  .: {}
+                  'f:initContainer':
+                    .: {}
+                    'f:runtime':
+                      .: {}
+                      'f:imageName': {}
+                'f:protocol':
+                  .: {}
+                  'f:autoDetect':
+                    .: {}
+                    'f:inbound': {}
+                    'f:outbound': {}
+              'f:runtime':
+                .: {}
+                'f:container':
+                  .: {}
+                  'f:imageName': {}
+                  'f:resources':
+                    .: {}
+                    'f:requests':
+                      .: {}
+                      'f:cpu': {}
+                      'f:memory': {}
+            'f:profiles': {}
+            'f:techPreview':
+              .: {}
+              'f:global':
+                .: {}
+                'f:configNamespace': {}
+                'f:configRootNamespace': {}
+                'f:istioNamespace': {}
+                'f:policyNamespace': {}
+                'f:prometheusNamespace': {}
+                'f:telemetryNamespace': {}
+                'f:tracer':
+                  .: {}
+                  'f:zipkin':
+                    .: {}
+                    'f:address': {}
+              'f:istio_cni':
+                .: {}
+                'f:istio_cni_network': {}
+              'f:kiali':
+                .: {}
+                'f:install': {}
+              'f:revision': {}
+              'f:sidecarInjectorWebhook':
+                .: {}
+                'f:objectSelector':
+                  .: {}
+                  'f:enabled': {}
+              'f:tracing':
+                .: {}
+                'f:jaeger':
+                  .: {}
+                  'f:install': {}
+              'f:wasmExtensions':
+                .: {}
+                'f:enabled': {}
+          'f:components': {}
+          'f:appliedValues':
+            .: {}
+            'f:istio':
+              'f:gateways':
+                .: {}
+                'f:enabled': {}
+                'f:istio-egressgateway':
+                  .: {}
+                  'f:autoscaleEnabled': {}
+                  'f:enabled': {}
+                  'f:env':
+                    .: {}
+                    'f:ISTIO_META_REQUESTED_NETWORK_VIEW': {}
+                  'f:gatewayType': {}
+                  'f:name': {}
+                  'f:resources':
+                    .: {}
+                    'f:requests':
+                      .: {}
+                      'f:cpu': {}
+                      'f:memory': {}
+                'f:istio-ilbgateway':
+                  .: {}
+                  'f:enabled': {}
+                'f:istio-ingressgateway':
+                  .: {}
+                  'f:autoscaleEnabled': {}
+                  'f:enabled': {}
+                  'f:gatewayType': {}
+                  'f:ior_enabled': {}
+                  'f:name': {}
+                  'f:resources':
+                    .: {}
+                    'f:requests':
+                      .: {}
+                      'f:cpu': {}
+                      'f:memory': {}
+                  'f:type': {}
+              'f:pilot':
+                .: {}
+                'f:autoscaleEnabled': {}
+                'f:enableProtocolSniffingForInbound': {}
+                'f:enableProtocolSniffingForOutbound': {}
+                'f:image': {}
+                'f:resources':
+                  .: {}
+                  'f:requests':
+                    .: {}
+                    'f:cpu': {}
+                    'f:memory': {}
+                'f:traceSampling': {}
+              'f:telemetry':
+                .: {}
+                'f:enabled': {}
+                'f:implementation': {}
+                'f:v1':
+                  .: {}
+                  'f:enabled': {}
+                'f:v2':
+                  .: {}
+                  'f:enabled': {}
+                  'f:prometheus':
+                    .: {}
+                    'f:enabled': {}
+              'f:policy':
+                .: {}
+                'f:implementation': {}
+              'f:kiali':
+                .: {}
+                'f:dashboard':
+                  .: {}
+                  'f:viewOnlyMode': {}
+                'f:enabled': {}
+                'f:ingress':
+                  .: {}
+                  'f:enabled': {}
+                'f:install': {}
+                'f:resourceName': {}
+              'f:wasmExtensions':
+                .: {}
+                'f:cacher':
+                  .: {}
+                  'f:image': {}
+                  'f:resources':
+                    .: {}
+                    'f:requests':
+                      .: {}
+                      'f:cpu': {}
+                      'f:memory': {}
+                'f:enabled': {}
+              .: {}
+              'f:tracing':
+                .: {}
+                'f:enabled': {}
+                'f:ingress':
+                  .: {}
+                  'f:enabled': {}
+                'f:jaeger':
+                  .: {}
+                  'f:install': {}
+                  'f:resourceName': {}
+                  'f:template': {}
+                'f:provider': {}
+              'f:revision': {}
+              'f:grafana':
+                .: {}
+                'f:enabled': {}
+                'f:image': {}
+                'f:ingress':
+                  .: {}
+                  'f:enabled': {}
+                'f:service':
+                  .: {}
+                  'f:annotations':
+                    .: {}
+                    'f:service.alpha.openshift.io/serving-cert-secret-name': {}
+              'f:mixer':
+                .: {}
+                'f:adapters':
+                  .: {}
+                  'f:prometheus':
+                    .: {}
+                    'f:enabled': {}
+                'f:image': {}
+                'f:policy':
+                  .: {}
+                  'f:autoscaleEnabled': {}
+                  'f:enabled': {}
+                  'f:image': {}
+                  'f:resources':
+                    .: {}
+                    'f:requests':
+                      .: {}
+                      'f:cpu': {}
+                      'f:memory': {}
+                'f:telemetry':
+                  .: {}
+                  'f:autoscaleEnabled': {}
+                  'f:enabled': {}
+                  'f:image': {}
+                  'f:resources':
+                    .: {}
+                    'f:requests':
+                      .: {}
+                      'f:cpu': {}
+                      'f:memory': {}
+              'f:global':
+                'f:tracer':
+                  .: {}
+                  'f:zipkin':
+                    .: {}
+                    'f:address': {}
+                'f:hub': {}
+                'f:configRootNamespace': {}
+                'f:k8sIngress':
+                  .: {}
+                  'f:enableHttps': {}
+                  'f:enabled': {}
+                  'f:gatewayName': {}
+                'f:configNamespace': {}
+                'f:jwtPolicy': {}
+                'f:tag': {}
+                'f:logging':
+                  .: {}
+                  'f:level': {}
+                'f:enableTracing': {}
+                'f:oauthproxy':
+                  .: {}
+                  'f:hub': {}
+                  'f:image': {}
+                  'f:imagePullPolicy': {}
+                  'f:tag': {}
+                .: {}
+                'f:defaultPodDisruptionBudget':
+                  .: {}
+                  'f:enabled': {}
+                'f:multiCluster':
+                  .: {}
+                  'f:addedSearchSuffixes': {}
+                  'f:enabled': {}
+                  'f:multiClusterOverrides':
+                    'f:ingressEnabled': {}
+                    'f:multiClusterEnabled': {}
+                    .: {}
+                    'f:expansionEnabled': {}
+                    'f:ilbEnabled': {}
+                    'f:addedExternal': {}
+                    'f:egressEnabled': {}
+                    'f:gatewaysEnabled': {}
+                    'f:k8sIngressEnabled': {}
+                'f:policyNamespace': {}
+                'f:proxy_init':
+                  .: {}
+                  'f:image': {}
+                'f:telemetryNamespace': {}
+                'f:podDNSSearchNamespaces': {}
+                'f:defaultResources':
+                  .: {}
+                  'f:requests':
+                    .: {}
+                    'f:cpu': {}
+                    'f:memory': {}
+                'f:proxy':
+                  .: {}
+                  'f:autoInject': {}
+                  'f:dnsRefreshRate': {}
+                  'f:image': {}
+                  'f:resources':
+                    .: {}
+                    'f:requests':
+                      .: {}
+                      'f:cpu': {}
+                      'f:memory': {}
+                  'f:tracer': {}
+                'f:prometheusNamespace': {}
+                'f:meshExpansion':
+                  .: {}
+                  'f:enabled': {}
+                  'f:useILB': {}
+                'f:istioNamespace': {}
+              'f:sidecarInjectorWebhook':
+                .: {}
+                'f:enableNamespacesByDefault': {}
+                'f:objectSelector':
+                  .: {}
+                  'f:enabled': {}
+              'f:istio_cni':
+                .: {}
+                'f:enabled': {}
+                'f:istio_cni_network': {}
+              'f:prometheus':
+                .: {}
+                'f:enabled': {}
+                'f:image': {}
+                'f:ingress':
+                  .: {}
+                  'f:enabled': {}
+                'f:resources':
+                  .: {}
+                  'f:requests':
+                    .: {}
+                    'f:cpu': {}
+                    'f:memory': {}
+                'f:service':
+                  .: {}
+                  'f:annotations':
+                    .: {}
+                    'f:service.alpha.openshift.io/serving-cert-secret-name': {}
+            'f:profiles': {}
+            'f:template': {}
+            'f:threeScale':
+              .: {}
+              'f:hub': {}
+              'f:image': {}
+              'f:tag': {}
+            'f:version': {}
+          'f:conditions': {}
+          .: {}
+          'f:chartVersion': {}
+          'f:annotations':
+            .: {}
+            'f:alwaysReadyComponents': {}
+            'f:readyComponentCount': {}
+          'f:observedGeneration': {}
+          'f:readiness':
+            .: {}
+            'f:components':
+              .: {}
+              'f:pending': {}
+              'f:ready': {}
+              'f:unready': {}
+      manager: istio-operator
+      operation: Update
+      time: '2021-08-04T12:53:16Z'
+  namespace: demoplane
+  finalizers:
+    - maistra.io/istio-operator
+spec:
+  addons:
+    grafana:
+      enabled: true
+    jaeger:
+      install:
+        storage:
+          type: Memory
+    kiali:
+      enabled: true
+    prometheus:
+      enabled: true
+  cluster:
+    multiCluster:
+      enabled: true
+  gateways:
+    enabled: false
+  policy:
+    type: Istiod
+  profiles:
+    - default
+  telemetry:
+    type: Istiod
+  tracing:
+    sampling: 10000
+    type: Jaeger
+  version: v2.0
+status:
+  observedGeneration: 1
+  annotations:
+    alwaysReadyComponents: 'mesh-config,telemetry-common,tracing,kiali'
+    readyComponentCount: 9/9
+  readiness:
+    components:
+      pending: []
+      ready:
+        - grafana
+        - istio-discovery
+        - istio-egress
+        - istio-ingress
+        - kiali
+        - mesh-config
+        - prometheus
+        - telemetry-common
+        - tracing
+      unready: []
+  operatorVersion: 2.0.6-4.el8
+  components:
+    - conditions:
+        - lastTransitionTime: '2021-08-04T12:51:35Z'
+          message: Component installed successfully
+          reason: InstallSuccessful
+          status: 'True'
+          type: Reconciled
+        - lastTransitionTime: '2021-08-04T12:51:35Z'
+          message: Component installed successfully
+          reason: InstallSuccessful
+          status: 'True'
+          type: Installed
+      resource: istio-discovery
+    - conditions:
+        - lastTransitionTime: '2021-08-04T12:51:54Z'
+          message: Component installed successfully
+          reason: InstallSuccessful
+          status: 'True'
+          type: Reconciled
+        - lastTransitionTime: '2021-08-04T12:51:54Z'
+          message: Component installed successfully
+          reason: InstallSuccessful
+          status: 'True'
+          type: Installed
+      resource: mesh-config
+    - conditions:
+        - lastTransitionTime: '2021-08-04T12:51:54Z'
+          message: Component installed successfully
+          reason: InstallSuccessful
+          status: 'True'
+          type: Reconciled
+        - lastTransitionTime: '2021-08-04T12:51:54Z'
+          message: Component installed successfully
+          reason: InstallSuccessful
+          status: 'True'
+          type: Installed
+      resource: telemetry-common
+    - conditions:
+        - lastTransitionTime: '2021-08-04T12:51:54Z'
+          message: Component installed successfully
+          reason: InstallSuccessful
+          status: 'True'
+          type: Reconciled
+        - lastTransitionTime: '2021-08-04T12:51:54Z'
+          message: Component installed successfully
+          reason: InstallSuccessful
+          status: 'True'
+          type: Installed
+      resource: prometheus
+    - conditions:
+        - lastTransitionTime: '2021-08-04T12:52:04Z'
+          message: Component installed successfully
+          reason: InstallSuccessful
+          status: 'True'
+          type: Reconciled
+        - lastTransitionTime: '2021-08-04T12:52:04Z'
+          message: Component installed successfully
+          reason: InstallSuccessful
+          status: 'True'
+          type: Installed
+      resource: tracing
+    - conditions:
+        - lastTransitionTime: '2021-08-04T12:52:04Z'
+          message: Component installed successfully
+          reason: InstallSuccessful
+          status: 'True'
+          type: Reconciled
+        - lastTransitionTime: '2021-08-04T12:52:04Z'
+          message: Component installed successfully
+          reason: InstallSuccessful
+          status: 'True'
+          type: Installed
+      resource: istio-ingress
+    - conditions:
+        - lastTransitionTime: '2021-08-04T12:52:04Z'
+          message: Component installed successfully
+          reason: InstallSuccessful
+          status: 'True'
+          type: Reconciled
+        - lastTransitionTime: '2021-08-04T12:52:04Z'
+          message: Component installed successfully
+          reason: InstallSuccessful
+          status: 'True'
+          type: Installed
+      resource: istio-egress
+    - conditions:
+        - lastTransitionTime: '2021-08-04T12:52:05Z'
+          message: Component installed successfully
+          reason: InstallSuccessful
+          status: 'True'
+          type: Reconciled
+        - lastTransitionTime: '2021-08-04T12:52:05Z'
+          message: Component installed successfully
+          reason: InstallSuccessful
+          status: 'True'
+          type: Installed
+      resource: grafana
+    - conditions:
+        - lastTransitionTime: '2021-08-04T12:52:26Z'
+          message: Component installed successfully
+          reason: InstallSuccessful
+          status: 'True'
+          type: Reconciled
+        - lastTransitionTime: '2021-08-04T12:52:26Z'
+          message: Component installed successfully
+          reason: InstallSuccessful
+          status: 'True'
+          type: Installed
+      resource: kiali
+  appliedSpec:
+    security:
+      identity:
+        type: Kubernetes
+    tracing:
+      sampling: 10000
+      type: Jaeger
+    general:
+      logging:
+        componentLevels:
+          default: warn
+    profiles:
+      - default
+    proxy:
+      injection:
+        autoInject: false
+      networking:
+        dns:
+          refreshRate: 300s
+        initialization:
+          initContainer:
+            runtime:
+              imageName: >-
+                registry.redhat.io/openshift-service-mesh/proxy-init-rhel7@sha256:0d3f18d764241c1aa95d028b4d28acd163407b5a8781ad2b39c63a925f30e137
+        protocol:
+          autoDetect:
+            inbound: false
+            outbound: false
+      runtime:
+        container:
+          imageName: >-
+            registry.redhat.io/openshift-service-mesh/proxyv2-rhel8@sha256:dbb1f724333f6892d53f13c9619dcf3eff572b06c944c28fe6ad12fa18a7dc7b
+          resources:
+            requests:
+              cpu: 10m
+              memory: 128Mi
+    gateways:
+      egress:
+        runtime:
+          container:
+            resources:
+              requests:
+                cpu: 10m
+                memory: 128Mi
+          deployment:
+            autoScaling:
+              enabled: false
+        service: {}
+      enabled: false
+      ingress:
+        runtime:
+          container:
+            resources:
+              requests:
+                cpu: 10m
+                memory: 128Mi
+          deployment:
+            autoScaling:
+              enabled: false
+        service:
+          type: ClusterIP
+      openshiftRoute:
+        enabled: true
+    techPreview:
+      global:
+        configNamespace: demoplane
+        configRootNamespace: demoplane
+        istioNamespace: demoplane
+        policyNamespace: demoplane
+        prometheusNamespace: demoplane
+        telemetryNamespace: demoplane
+        tracer:
+          zipkin:
+            address: 'jaeger-collector.demoplane.svc:9411'
+      istio_cni:
+        istio_cni_network: v2-0-istio-cni
+      kiali:
+        install: true
+      revision: basic
+      sidecarInjectorWebhook:
+        objectSelector:
+          enabled: false
+      tracing:
+        jaeger:
+          install: true
+      wasmExtensions:
+        enabled: false
+    policy:
+      type: Istiod
+    addons:
+      grafana:
+        enabled: true
+        install:
+          service:
+            ingress:
+              enabled: true
+            metadata:
+              annotations:
+                service.alpha.openshift.io/serving-cert-secret-name: grafana-tls
+      jaeger:
+        install:
+          ingress:
+            enabled: true
+          storage:
+            type: Memory
+        name: jaeger
+      kiali:
+        enabled: true
+        install:
+          dashboard:
+            viewOnly: false
+          service:
+            ingress:
+              enabled: true
+        name: kiali
+      prometheus:
+        enabled: true
+        install:
+          service:
+            ingress:
+              enabled: true
+            metadata:
+              annotations:
+                service.alpha.openshift.io/serving-cert-secret-name: prometheus-tls
+    version: v2.0
+    runtime:
+      components:
+        global.oauthproxy:
+          container:
+            imageName: >-
+              quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:464b24ade2b45bbb53ed41581af8a59225305bbacd08af7e64a358e5e12c63ec
+            imagePullPolicy: IfNotPresent
+            imageRegistry: registry.redhat.io/openshift4
+            imageTag: v4.4
+        grafana:
+          container:
+            imageName: >-
+              registry.redhat.io/openshift-service-mesh/grafana-rhel8@sha256:061c5840f55e80802faccb330bd10b71403192fecf6a74b3d14ed817ff95b319
+        wasmExtensions.cacher:
+          container:
+            imageName: >-
+              registry.redhat.io/openshift-service-mesh/pilot-rhel8@sha256:df4ecd1abc5e573135bc0ef910c5a9a1d089e3c9824993919932700807048ebd
+            resources:
+              requests:
+                cpu: 10m
+                memory: 128Mi
+        mixer:
+          container:
+            imageName: >-
+              registry.redhat.io/openshift-service-mesh/mixer-rhel8@sha256:3b728bee542f899ea8897a2b9b20fb242cbe902f9a222c1b7510a7831069b0a6
+        prometheus:
+          container:
+            imageName: >-
+              registry.redhat.io/openshift-service-mesh/prometheus-rhel8@sha256:2ade73924b1c6b6d2a5a083008c7a62d9eb137af070f6efcd7c0ee59f923e8de
+            resources:
+              requests:
+                cpu: 10m
+                memory: 128Mi
+        mixer.telemetry:
+          container:
+            imageName: >-
+              registry.redhat.io/openshift-service-mesh/mixer-rhel8@sha256:3b728bee542f899ea8897a2b9b20fb242cbe902f9a222c1b7510a7831069b0a6
+            resources:
+              requests:
+                cpu: 10m
+                memory: 128Mi
+          deployment:
+            autoScaling:
+              enabled: false
+        3scale:
+          container:
+            imageName: >-
+              registry.redhat.io/openshift-service-mesh/3scale-istio-adapter-rhel8@sha256:ffadc13f865f34a6f9a94655baee9e379177b274f7ec0bc30d042c2d034bed3b
+            imageRegistry: registry.redhat.io/openshift-service-mesh
+            imageTag: 2.0.0
+        mixer.policy:
+          container:
+            imageName: >-
+              registry.redhat.io/openshift-service-mesh/mixer-rhel8@sha256:3b728bee542f899ea8897a2b9b20fb242cbe902f9a222c1b7510a7831069b0a6
+            resources:
+              requests:
+                cpu: 10m
+                memory: 128Mi
+          deployment:
+            autoScaling:
+              enabled: false
+        pilot:
+          container:
+            imageName: >-
+              registry.redhat.io/openshift-service-mesh/pilot-rhel8@sha256:df4ecd1abc5e573135bc0ef910c5a9a1d089e3c9824993919932700807048ebd
+            resources:
+              requests:
+                cpu: 10m
+                memory: 128Mi
+          deployment:
+            autoScaling:
+              enabled: false
+      defaults:
+        container:
+          imageRegistry: registry.redhat.io/openshift-service-mesh
+          imageTag: 2.0.6
+          resources:
+            requests:
+              cpu: 10m
+              memory: 128Mi
+        deployment:
+          podDisruption:
+            enabled: false
+    telemetry:
+      type: Istiod
+  conditions:
+    - lastTransitionTime: '2021-08-04T12:53:16Z'
+      message: Successfully installed all mesh components
+      reason: InstallSuccessful
+      status: 'True'
+      type: Installed
+    - lastTransitionTime: '2021-08-04T12:53:16Z'
+      message: Successfully installed version 2.0.6-4.el8-1
+      reason: InstallSuccessful
+      status: 'True'
+      type: Reconciled
+    - lastTransitionTime: '2021-08-04T12:53:16Z'
+      message: All component deployments are Available
+      reason: ComponentsReady
+      status: 'True'
+      type: Ready
+  chartVersion: 2.0.6.2
+  appliedValues:
+    istio:
+      kiali:
+        dashboard:
+          viewOnlyMode: false
+        enabled: true
+        ingress:
+          enabled: true
+        install: true
+        resourceName: kiali
+      tracing:
+        enabled: true
+        ingress:
+          enabled: true
+        jaeger:
+          install: true
+          resourceName: jaeger
+          template: all-in-one
+        provider: jaeger
+      global:
+        proxy_init:
+          image: >-
+            registry.redhat.io/openshift-service-mesh/proxy-init-rhel7@sha256:0d3f18d764241c1aa95d028b4d28acd163407b5a8781ad2b39c63a925f30e137
+        multiCluster:
+          addedSearchSuffixes:
+            - '{{ valueOrDefault .DeploymentMeta.Namespace "demoplane" }}.global'
+            - global
+          enabled: true
+          multiClusterOverrides:
+            addedExternal: true
+            egressEnabled: null
+            expansionEnabled: null
+            gatewaysEnabled: false
+            ilbEnabled: null
+            ingressEnabled: null
+            k8sIngressEnabled: null
+            multiClusterEnabled: null
+        telemetryNamespace: demoplane
+        defaultResources:
+          requests:
+            cpu: 10m
+            memory: 128Mi
+        podDNSSearchNamespaces:
+          - global
+          - '{{ valueOrDefault .DeploymentMeta.Namespace "demoplane" }}.global'
+        policyNamespace: demoplane
+        istioNamespace: demoplane
+        tracer:
+          zipkin:
+            address: 'jaeger-collector.demoplane.svc:9411'
+        proxy:
+          autoInject: disabled
+          dnsRefreshRate: 300s
+          image: >-
+            registry.redhat.io/openshift-service-mesh/proxyv2-rhel8@sha256:dbb1f724333f6892d53f13c9619dcf3eff572b06c944c28fe6ad12fa18a7dc7b
+          resources:
+            requests:
+              cpu: 10m
+              memory: 128Mi
+          tracer: zipkin
+        k8sIngress:
+          enableHttps: false
+          enabled: true
+          gatewayName: ingressgateway
+        prometheusNamespace: demoplane
+        meshExpansion:
+          enabled: true
+          useILB: false
+        hub: registry.redhat.io/openshift-service-mesh
+        oauthproxy:
+          hub: registry.redhat.io/openshift4
+          image: >-
+            quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:464b24ade2b45bbb53ed41581af8a59225305bbacd08af7e64a358e5e12c63ec
+          imagePullPolicy: IfNotPresent
+          tag: v4.4
+        configRootNamespace: demoplane
+        configNamespace: demoplane
+        jwtPolicy: first-party-jwt
+        tag: 2.0.6
+        defaultPodDisruptionBudget:
+          enabled: false
+        enableTracing: true
+        logging:
+          level: 'default:warn'
+      grafana:
+        enabled: true
+        image: >-
+          registry.redhat.io/openshift-service-mesh/grafana-rhel8@sha256:061c5840f55e80802faccb330bd10b71403192fecf6a74b3d14ed817ff95b319
+        ingress:
+          enabled: true
+        service:
+          annotations:
+            service.alpha.openshift.io/serving-cert-secret-name: grafana-tls
+      sidecarInjectorWebhook:
+        enableNamespacesByDefault: false
+        objectSelector:
+          enabled: false
+      mixer:
+        adapters:
+          prometheus:
+            enabled: true
+        image: >-
+          registry.redhat.io/openshift-service-mesh/mixer-rhel8@sha256:3b728bee542f899ea8897a2b9b20fb242cbe902f9a222c1b7510a7831069b0a6
+        policy:
+          autoscaleEnabled: false
+          enabled: false
+          image: >-
+            registry.redhat.io/openshift-service-mesh/mixer-rhel8@sha256:3b728bee542f899ea8897a2b9b20fb242cbe902f9a222c1b7510a7831069b0a6
+          resources:
+            requests:
+              cpu: 10m
+              memory: 128Mi
+        telemetry:
+          autoscaleEnabled: false
+          enabled: false
+          image: >-
+            registry.redhat.io/openshift-service-mesh/mixer-rhel8@sha256:3b728bee542f899ea8897a2b9b20fb242cbe902f9a222c1b7510a7831069b0a6
+          resources:
+            requests:
+              cpu: 10m
+              memory: 128Mi
+      prometheus:
+        enabled: true
+        image: >-
+          registry.redhat.io/openshift-service-mesh/prometheus-rhel8@sha256:2ade73924b1c6b6d2a5a083008c7a62d9eb137af070f6efcd7c0ee59f923e8de
+        ingress:
+          enabled: true
+        resources:
+          requests:
+            cpu: 10m
+            memory: 128Mi
+        service:
+          annotations:
+            service.alpha.openshift.io/serving-cert-secret-name: prometheus-tls
+      gateways:
+        enabled: true
+        istio-egressgateway:
+          autoscaleEnabled: false
+          enabled: true
+          env:
+            ISTIO_META_REQUESTED_NETWORK_VIEW: external
+          gatewayType: egress
+          name: istio-egressgateway
+          resources:
+            requests:
+              cpu: 10m
+              memory: 128Mi
+        istio-ilbgateway:
+          enabled: false
+        istio-ingressgateway:
+          autoscaleEnabled: false
+          enabled: true
+          gatewayType: ingress
+          ior_enabled: true
+          name: istio-ingressgateway
+          resources:
+            requests:
+              cpu: 10m
+              memory: 128Mi
+          type: ClusterIP
+      istio_cni:
+        enabled: true
+        istio_cni_network: v2-0-istio-cni
+      policy:
+        implementation: Istiod
+      wasmExtensions:
+        cacher:
+          image: >-
+            registry.redhat.io/openshift-service-mesh/pilot-rhel8@sha256:df4ecd1abc5e573135bc0ef910c5a9a1d089e3c9824993919932700807048ebd
+          resources:
+            requests:
+              cpu: 10m
+              memory: 128Mi
+        enabled: false
+      pilot:
+        autoscaleEnabled: false
+        enableProtocolSniffingForInbound: false
+        enableProtocolSniffingForOutbound: false
+        image: >-
+          registry.redhat.io/openshift-service-mesh/pilot-rhel8@sha256:df4ecd1abc5e573135bc0ef910c5a9a1d089e3c9824993919932700807048ebd
+        resources:
+          requests:
+            cpu: 10m
+            memory: 128Mi
+        traceSampling: 100
+      telemetry:
+        enabled: true
+        implementation: Istiod
+        v1:
+          enabled: false
+        v2:
+          enabled: true
+          prometheus:
+            enabled: true
+      revision: basic
+    profiles:
+      - default
+    template: default
+    threeScale:
+      hub: registry.redhat.io/openshift-service-mesh
+      image: >-
+        registry.redhat.io/openshift-service-mesh/3scale-istio-adapter-rhel8@sha256:ffadc13f865f34a6f9a94655baee9e379177b274f7ec0bc30d042c2d034bed3b
+      tag: 2.0.0
+    version: v2.0
+
